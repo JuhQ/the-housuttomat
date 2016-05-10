@@ -3,4 +3,4 @@
 The people who forgot their pants
 
 
-[Check the example](example/haha.mov)
+[Check the example](http://codepen.io/anon/pen/pyYyZN)
