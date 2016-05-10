@@ -1,20 +1,48 @@
 'use strict';
 
-
 var binaries = [
   '01001010011001010111010000100000010001100111010101100101011011000010000001000011011000010110111011100010100000001001100101110100001000000100110101100101011011000111010000100000010100110111010001100101011001010110110000100000010000100110010101100001011011010111001100100000010010100110010101110100001000000100011001110101011001010110110000100000010000110110000101101110111000101000000010011001011101000010000001001101011001010110110001110100001000000101001101110100011001010110010101101100001000000100001001100101011000010110110101110011001000000111100101101111011011000110111100100001',
   '010010000110111101110101011100110111010101110100011011110110111000100000010010010110111001100011001011100010000000101101011101100110100101100100011001010110111101110011011000010111001001101010011000010010000001101111011011100010000001100100011011110110101101110101011011010110010101101110011101000111010001101001001000000111001101110101011011110111001001100001011000010110111000100000011001010110110011000011101001000111011011000011101001000111001101110100110000111010010000100000011001010110110011000011101001000110110111000011101001000111001101110100110000111010010000101110'
 ];
 
+var punchlines = [
+  'Jaaha, Niko meni taas rikki, aika workshopille!',
+  'Mistä näitä post-it lappuja oikein tulee, ja miksi niissä on irtokäsiä?!',
+  'Miksi puheeni tulee ulos korvasta?',
+  'Olen Men In Black,<br> agentti P',
+  'Niko, kaikki hyvin?<br>Beep boop buup!',
+  'Alan epäillä että leijumme äärettömässä tyhjyydessä'
+];
 
 var randomNumber = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-var takePantsOff = function() {
-  var bubble = document.getElementById('bubble');
-  bubble.innerText = binaries[randomNumber(0, binaries.length - 1)]
+
+var addLappu = function(postit, postitContainer) {
+  return function() {
+    var clone = postit.cloneNode();
+    postitContainer.appendChild(clone);
+    clone.style.left = randomNumber(0, 200) + "px";
+    setTimeout(function() {
+      clone.style.top = randomNumber(400, 600) + "px";
+    }, 10);
+
+    setTimeout(addLappu(postit, postitContainer), randomNumber(300, 1800));
+  };
 };
 
+var takePantsOff = function() {
+  var bubble = document.getElementById('bubble');
+  bubble.innerText = binaries[randomNumber(0, binaries.length - 1)];
+
+  var bubble2 = document.getElementById('bubble2');
+  bubble2.innerHTML = punchlines[randomNumber(0, punchlines.length - 1)];
+
+  var postit = document.getElementsByClassName('postit')[0];
+  var postitContainer = document.getElementsByClassName('postit-container')[0];
+
+  addLappu(postit, postitContainer)();
+};
 
 document.addEventListener('DOMContentLoaded', takePantsOff);
