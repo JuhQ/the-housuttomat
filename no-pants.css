@@ -1,0 +1,334 @@
+body {
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+#niko {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+}
+
+#niko .head {
+  background-image: url('http://housuton-inc.com/images/Paat/H_Paa_muokattava_Niko.svg');
+  width: 130px;
+  height: 150px;
+
+  animation-duration: 8s;
+  animation-name: wiggleHead;
+  animation-iteration-count: infinite;
+}
+
+#niko .head .left-eye {
+  background-image: url('http://housuton-inc.com/images/Paat/H_Silma2.svg');
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 61px;
+  left: 59px;
+  z-index: -1;
+
+  animation-duration: 0.65s;
+  animation-delay: 0.1s;
+  animation-name: changeEyes;
+  animation-iteration-count: infinite;
+}
+
+#niko .head .right-eye {
+  background-image: url('http://housuton-inc.com/images/Paat/H_Silma2.svg');
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 59px;
+  left: 15px;
+  z-index: -1;
+
+  animation-duration: 0.6s;
+  animation-name: changeEyes;
+  animation-iteration-count: infinite;
+}
+
+#niko .head .mouth {
+  background-image: url('http://housuton-inc.com/images/Paat/H_Suu_Ruotimo.svg');
+  width: 64px;
+  height: 23px;
+  position: absolute;
+  top: 100px;
+  left: 9px;
+  z-index: -1;
+  transform: scaleX(-1);
+
+
+  animation-duration: 2s;
+  animation-name: changeMouth;
+  animation-iteration-count: infinite;
+}
+
+#niko .torso {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Torso_Niko.svg');
+  width: 100px;
+  height: 223px;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 106px;
+  left: 18px;
+  z-index: -1;
+}
+
+#niko .right-hand .upper-part {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Olkavarsi_Niko.svg');
+  width: 33px;
+  height: 120px;
+  position: absolute;
+  top: 164px;
+  left: 12px;
+  z-index: -1;
+}
+
+#niko .right-hand .lower-part {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Kyynarvarsi_Niko.svg');
+  width: 33px;
+  height: 98px;
+  position: absolute;
+  top: 261px;
+  left: 12px;
+  z-index: -1;
+  animation-duration: 3s;
+  animation-name: moveRightHandLowerPart;
+  animation-iteration-count: infinite;
+}
+#niko .right-hand .palm {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Kasi1.svg');
+  width: 70px;
+  height: 65px;
+  position: absolute;
+  top: 75px;
+  left: 2px;
+  z-index: -1;
+  transform: rotate(55deg);
+}
+
+
+#niko .left-hand .upper-part {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Olkavarsi_Niko.svg');
+  width: 30px;
+  height: 113px;
+  position: absolute;
+  top: 164px;
+  left: 92px;
+  z-index: -2;
+}
+
+#niko .left-hand .lower-part {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Kyynarvarsi_Niko.svg');
+  width: 31px;
+  height: 88px;
+  position: absolute;
+  top: 261px;
+  left: 92px;
+  z-index: -2;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+  animation-name: moveLeftHandLowerPart;
+  animation-iteration-count: infinite;
+}
+
+#niko .left-hand .palm {
+  background-image: url('http://housuton-inc.com/images/Ylaosa/H_Kasi5.svg');
+  width: 40px;
+  height: 33px;
+  position: absolute;
+  top: 72px;
+  left: -2px;
+  z-index: -1;
+  transform: rotate(91deg);
+}
+
+#niko .hip {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Lantio_Vesa_Sipila_Niko.svg');
+  width: 107px;
+  height: 70px;
+  position: absolute;
+  top: 312px;
+  left: 15px;
+  z-index: -2;
+}
+
+#niko .right-thigh {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Reisi_Vesa_Sipila.svg');
+  width: 47px;
+  height: 131px;
+  position: absolute;
+  top: 367px;
+  left: 22px;
+  z-index: -2;
+}
+#niko .right-calf {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Saari_Suvi_Pasi_Niko.svg');
+  width: 31px;
+  height: 112px;
+  position: absolute;
+  top: 480px;
+  left: 41px;
+  z-index: -2;
+}
+#niko .right-foot {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Etukenka_ruskea.svg');
+  width: 61px;
+  height: 42px;
+  position: absolute;
+  top: 572px;
+  left: 41px;
+  z-index: -2;
+}
+
+
+#niko .left-thigh {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Reisi_Vesa_Sipila.svg');
+  width: 47px;
+  height: 131px;
+  position: absolute;
+  top: 357px;
+  left: 72px;
+  z-index: -2;
+}
+#niko .left-calf {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Saari_Suvi_Pasi_Niko.svg');
+  width: 31px;
+  height: 112px;
+  position: absolute;
+  top: 470px;
+  left: 91px;
+  z-index: -4;
+}
+#niko .left-foot {
+  background-image: url('http://housuton-inc.com/images/Alaosa/H_Etukenka_ruskea.svg');
+  width: 61px;
+  height: 42px;
+  position: absolute;
+  top: 562px;
+  left: 91px;
+  z-index: -3;
+}
+
+#niko .bubble {
+  background-image: url('http://housuton-inc.com/images/Muut/H_Puhekupla1.svg');
+  width: 241px;
+  height: 250px;
+  position: absolute;
+  left: 145px;
+  top: -2px;
+  transform: rotate(30deg);
+}
+#niko .bubble .text-container {
+  height: 157px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 8px;
+  right: 0;
+  width: 229px;
+  top: -12px;
+}
+#niko .bubble .text {
+  word-wrap: break-word;
+  height: 133px;
+  border-radius: 100%;
+  animation-duration: 5s;
+  animation-name: moveBubbleText;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes wiggleHead {
+  0% {
+    transform: rotate(0) scaleX(-1);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotate(20deg) scaleX(-1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(0) scaleX(-1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes changeEyes {
+  0% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma2.svg');
+  }
+  16% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma5.svg');
+  }
+  33% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma1.svg');
+  }
+  49% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma2.svg');
+  }
+  68% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma3.svg');
+  }
+  100% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Silma_Pirkko.svg');
+  }
+}
+
+@keyframes changeMouth {
+  0%, 49% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Suu_Ruotimo.svg');
+  }
+  50%, 99% {
+    background-image: url('http://housuton-inc.com/images/Paat/H_Suu_Ruotimo2.svg');
+  }
+}
+
+
+@keyframes moveRightHandLowerPart {
+  0% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(-30deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+}
+
+@keyframes moveLeftHandLowerPart {
+  0% {
+    transform: rotate(10deg);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(-40deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(10deg);
+    transform-origin: top;
+  }
+}
+
+@keyframes moveBubbleText {
+  0% {
+    transform: translate(0, -10%);
+  }
+  50% {
+    transform: translate(0, -160%);
+  }
+  100% {
+    transform: translate(0, -10%);
+  }
+}
